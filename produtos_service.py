@@ -1,9 +1,23 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from shared.find_all_in_cache import find_all_in_cache
 from shared.save_cache import save_cache
 from shared.find_in_cache import find_in_cache
 
 app = FastAPI()
+
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.post("/produtos")
 async def add_produto(id: int, nome: str, preco: float):

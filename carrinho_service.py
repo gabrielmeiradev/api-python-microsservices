@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from shared.save_cache import save_cache
-from shared.search_in_cache import find_in_cache
+from shared.find_in_cache import find_in_cache
 
 app = FastAPI()
 

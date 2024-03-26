@@ -1,2 +1,0 @@
-{'user_id': '2', 'order_id': 1527}
-{'user_id': '2', 'order_id': 7999}

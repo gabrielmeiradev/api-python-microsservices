@@ -25,7 +25,7 @@ export default class Index {
                         </span>
                         Carrinho
                     </a>
-                    <a href='#pedido' class="btn btn btn-outline-dark d-flex gap-1">
+                    <a href='#pedidos' class="btn btn btn-outline-dark d-flex gap-1">
                         <span class="material-symbols-outlined">
                             receipt_long
                         </span>

@@ -1,6 +1,8 @@
 import Index from "./index/Index.js"
 import Produtos from "./produtos/Produtos.js"
 import Login from "./login/Login.js"
+import Pedidos from "./pedidos/Pedidos.js"
+import Carrinho from "./carrinho/Carrinho.js"
 
 export class Router {
     constructor() {
@@ -14,7 +16,9 @@ export class Router {
     routes = {
         "": new Index(),
         "produtos": new Produtos(),
-        "login": new Login()
+        "login": new Login(),
+        "pedidos": new Pedidos(),
+        "carrinho": new Carrinho()
     }
 
     _hashInRoutes = () => {
@@ -25,6 +29,7 @@ export class Router {
     
     _loadActualRoute = () => {
         const page = this._hashInRoutes()
+        console.log(page)
         if(!page) return alert("Página não encontrada")
         
         document.title = page.title

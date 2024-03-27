@@ -49,6 +49,6 @@ export default class Produtos {
             </div>
             <div id="produtos-list"></div>
         `,
-        onload: awaitDom(this.controller.getAllProdutos)
+        onload: () => {awaitDom(this.controller.getAllProdutos)}
     }
 }

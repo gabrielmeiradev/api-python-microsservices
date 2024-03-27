@@ -19,14 +19,16 @@ export default class Login {
         }
     }
     
-    body = `
-        <div class="w-100 h-100 d-flex align-items-center justify-content-center flex-column">
-            <div class="container w-50 text-center">
-                <h1>Login</h1>
-                <input class="form-control mb-2" placeholder="Digite o usuário" id="user">
-                <input class="form-control mb-3" placeholder="Digite sua senha" type="password" id="pass">
-                <button class="btn btn-primary w-100" onclick="controller.login()">Entrar</button>
+    body = {
+        innerHTML: `
+            <div class="w-100 h-100 d-flex align-items-center justify-content-center flex-column">
+                <div class="container w-50 text-center">
+                    <h1>Login</h1>
+                    <input class="form-control mb-2" placeholder="Digite o usuário" id="user">
+                    <input class="form-control mb-3" placeholder="Digite sua senha" type="password" id="pass">
+                    <button class="btn btn-primary w-100" onclick="controller.login()">Entrar</button>
+                </div>
             </div>
-        </div>
-    `
+        `
+    }
 }

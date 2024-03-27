@@ -28,7 +28,11 @@ export class Router {
         if(!page) return alert("Página não encontrada")
         
         document.title = page.title
-        document.body.innerHTML = page.body
+
+        Object.keys(page.body).forEach(key => {
+            document.body[key] = page.body[key];
+        });
+
         if (page.style) document.querySelector("#styled").innerHTML = page.style;
         if (page.controller) this.setController(page.controller);
     }
